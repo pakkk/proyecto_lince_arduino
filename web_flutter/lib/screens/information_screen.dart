@@ -20,14 +20,14 @@ class _InformationScreenState extends State<InformationScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Center(
+        title: const Center(
           child: SizedBox(
             height: 100,
             child: Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 20),
+              padding: EdgeInsets.only(top: 20, bottom: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   Image(image: AssetImage("assets/lince.jpg"), width: 50),
                   Padding(
                     padding: EdgeInsets.only(left: 20),

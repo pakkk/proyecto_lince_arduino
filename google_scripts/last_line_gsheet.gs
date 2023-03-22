@@ -1,5 +1,5 @@
 // indico la url del google sheet
-const sheet = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1VfWjrDH09sLQeiZVHfeS2yjjuTQMvLqADJIsz4DTVrE/edit#gid=0");
+const sheet = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/11BRoqIaOXffdxijnQSf2nwbhEclfnCiHFCaaZ2TGBKU/edit");
 
 // metodo que se lanza al realizar una peticion get
 function doGet(request) 
@@ -11,7 +11,7 @@ function doGet(request)
 function getData() 
 {
   // indico la hoja del google sheet
-  var hoja = sheet.getSheetByName("Hoja 1");
+  var hoja = sheet.getSheetByName("Geolocalizacion");
 
   // indico cual es la ultima fila ocupada 
   var ultimaFila = hoja.getLastRow();
@@ -24,3 +24,5 @@ function getData()
   // devuelvo el valor de la ultima fila
   return values.flat();
 }
+
+/** https://script.google.com/macros/s/AKfycbzjE3qDddl-FzwEcHrPS82XWgAJMoVLiJPo-IKCKrV_AM5Vgk9PExih7TuFHaH3XzQ/exec */

@@ -1,5 +1,5 @@
 // abro la hoja de calculo, a traves del metodo openByUrl, pasandole como parametro la url de la hoja de calculo
-const sheet = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/1VfWjrDH09sLQeiZVHfeS2yjjuTQMvLqADJIsz4DTVrE/edit#gid=0");
+const sheet = SpreadsheetApp.openByUrl("https://docs.google.com/spreadsheets/d/11BRoqIaOXffdxijnQSf2nwbhEclfnCiHFCaaZ2TGBKU/edit#gid=0");
 
 // funcion doPost, se realiza al hacer una petcion post
 function doPost(request) 
@@ -12,7 +12,7 @@ function doPost(request)
 function setDataInSheet(coordenadas) 
 {
   // indica con que hoja del libro se va a trabajar
-  hoja = sheet.getSheetByName("Hoja 1");
+  hoja = sheet.getSheetByName("Geolocalizacion");
 
   if (coordenadas != "NoDisponible")
   {
@@ -52,4 +52,4 @@ function parseCoordenadas(coordenadas) {
   };
 }
 
-// https://script.google.com/macros/s/AKfycbxH7ItdY1Oa0aL7vhBAR2a1aMpBmItAOdOOXz9mpjSm_3UX2yRFOrPSOItHGpfzzH_iGA/exec
+// https://script.google.com/macros/s/AKfycbw8Y7mu8MmBHAM3cSvJXnH9iKOMxlDEqAAX5nfrzhtUWTAZdQQWQabNk207CGjQEzIqLg/exec

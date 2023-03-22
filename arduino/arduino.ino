@@ -40,6 +40,9 @@ void setup()
   }
 
   SerialUSB.println("Maduino Zero 4G Test Start!");
+
+  // pin tarjeta SIM
+  sendData("AT+CPIN=4685", 1000, DEBUG);
   
   // inicializo el modulo de gps de la placa
   sendData("AT+CGPS=1", 1000, DEBUG);
@@ -92,7 +95,7 @@ void loop()
     coordenadasUrl = coordenadasString;
   }
 
-  String url = "https://script.google.com/macros/s/AKfycbxH7ItdY1Oa0aL7vhBAR2a1aMpBmItAOdOOXz9mpjSm_3UX2yRFOrPSOItHGpfzzH_iGA/exec?";
+  String url = "https://script.google.com/macros/s/AKfycbw8Y7mu8MmBHAM3cSvJXnH9iKOMxlDEqAAX5nfrzhtUWTAZdQQWQabNk207CGjQEzIqLg/exec?";
 
   if (coordenadasUrl.equals(",,,"))
   {

@@ -5,7 +5,7 @@ class InfoProvider extends ChangeNotifier {
   InfoProvider();
 
   Future<List<String>> getInfo() async {
-    var url = "https://script.google.com/macros/s/AKfycbxtzTz8iUWREcv_FZdRTJD9l_DO-uQj-ae4iklQp9wLxCAlXVV1MerknXLdAOp7MTn2/exec";
+    var url = "https://script.google.com/macros/s/AKfycbzjE3qDddl-FzwEcHrPS82XWgAJMoVLiJPo-IKCKrV_AM5Vgk9PExih7TuFHaH3XzQ/exec";
 
     var response = await http.get(Uri.parse(url));
 
