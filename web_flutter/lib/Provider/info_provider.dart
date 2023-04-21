@@ -17,4 +17,15 @@ class InfoProvider extends ChangeNotifier {
 
     return info;
   }
+
+  Future<String> getURLTemplate() async {
+    var url = "https://script.google.com/macros/s/AKfycbwVvFM9miYiWjFPHaMdi8wX_e8Tc6fGw4wmP_lBiY8mH5NFypBN5SqImhOsFTElbukj/exec";
+    var response = await http.get(Uri.parse(url));
+
+    var urlTemplate = response.body.replaceAll("\"", "");
+
+    notifyListeners();
+
+    return urlTemplate;
+  }
 }
